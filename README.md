@@ -109,6 +109,7 @@ VICTIM:~$ echo $PATH
 ```
 
 Let's replace it, we have two ways of doing it:
+
 **Terminal 2**
 ```bash
 ATTACKER:~$ python3 -BO mre.py 269 -r "\0/home/shotokan/.local/bin:/home/shotokan/perl5/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games\0" '\0/snado'
@@ -128,6 +129,7 @@ TO: b'\x00snado\x00[*136]'
 (Yes, it supports REGEX!)
 
 And congratulations, you successfully replaced the `$PATH` variable!
+
 **Terminal 1**
 ```bash
 VICTIM:~$ echo $PATH
